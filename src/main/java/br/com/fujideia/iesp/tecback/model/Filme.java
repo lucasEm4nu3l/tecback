@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Data
 @Entity
+@Data
 @NoArgsConstructor
 public class Filme {
 
@@ -37,4 +37,14 @@ public class Filme {
             inverseJoinColumns = @JoinColumn(name = "genero_id")
     )
     private List<Genero> generos;
+
+    @ManyToMany
+    @JoinTable(
+            name = "filme_produtor",
+            joinColumns = @JoinColumn(name = "filme_id"),
+            inverseJoinColumns = @JoinColumn(name = "produtor_id")
+    )
+    private List<Produtor> produtores;
+
+
 }

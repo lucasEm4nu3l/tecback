@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/cache")
 @RequiredArgsConstructor
 public class CacheController {
+
     private final CacheManager cacheManager;
 
     @GetMapping

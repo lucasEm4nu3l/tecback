@@ -1,19 +1,15 @@
 package br.com.fujideia.iesp.tecback.model.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-public class GeneroDTO {
-
+@AllArgsConstructor
+public class ProdutorDTO {
 
     private Long id;
-
     private String nome;
 
 }

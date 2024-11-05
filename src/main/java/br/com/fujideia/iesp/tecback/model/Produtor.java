@@ -7,12 +7,11 @@ import lombok.Setter;
 
 import java.util.List;
 
-
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity
-public class Genero {
+public class Produtor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +19,6 @@ public class Genero {
 
     private String nome;
 
-    @ManyToMany(mappedBy = "generos")
+    @ManyToMany(mappedBy = "produtores")
     private List<Filme> filmes;
 }
-
